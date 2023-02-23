@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<h1>LIVE QUOTES</h1>
+</br>
+
+
+
+<table class="table table-striped table-hover">
+
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Product name</th>
+      <th scope="col">Price</th>
+      <th scope="col">CHANGE</th>
+      <th scope="col">CHANGE PERCENTAGE</th>
+      <th scope="col">Open</th>
+      <th scope="col">HIGH</th>
+      <th scope="col">Low</th>
+      <th scope="col">TIME</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+
+		
+    <tr>
+      {% for dt in data%}
+      <td>{{dt.commodity}}</td>
+      <td>{{dt.price}}</td>
+      <td>{{dt.change}}</td>
+      <td>{{dt.change_per}}</td>
+      <td>{{dt.open}}</td>
+      <td>{{dt.high}}</td>
+      <td>{{dt.low}}</td>
+      <td>{{dt.time}}</td>
+      
+    </tr>
+      {% endfor %}
+		
+  </tbody>
+</table>
+
+
+
+{% endblock %}

@@ -18,7 +18,10 @@ from django.urls import path, include
 from userapp import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('userapp.urls')),
-   
+    path('', views.home, name='home'),
+    path('login/',views.Login,name='login'),
+    path('algo/',views.algo,name='algo'),
+    path('live_quotes/',views.live_quotes,name='live_quotes'),
+    path('non_agro/',views.non_agrolist,name='non_agro'),
+
 ]

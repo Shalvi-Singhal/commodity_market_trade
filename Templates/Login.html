@@ -1,0 +1,53 @@
+<html lang="en"><head>
+
+   
+  
+  <body>
+  
+    <h1>Add Stock to Portfolio</h1>
+  </br>
+  
+  
+  
+  <table class="table table-striped table-hover">
+  
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">TICKER</th>
+        <th scope="col">COMPANY</th>
+        <th scope="col">STK PRICE</th>
+        <th scope="col">PREV CLOSE</th>
+        <th scope="col">MARKET CAP</th>
+        <th scope="col">VOLUME</th>
+        <th scope="col">YTD CHG</th>
+        <th scope="col">52 WK HIGH</th>
+        <th scope="col">52 WK LOW</th>
+        <th scope="col">REMOVE STK</th>
+  
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      {% for dt in data%}
+      <td>{{dt.pname}}</td>
+      <td>{{dt.expiry_date}}</td>
+      <td>{{dt.open}}</td>
+      <td>{{dt.low}}</td>
+      <td>{{dt.ltp}}</td>
+      <td>{{dt.high}}</td>
+      <td>{{dt.close}}</td>
+      <td>{{dt.change}}</td>
+      <td>{{dt.change_percentage}}</td>
+      <td>{{dt.avtp}}</td>
+      <td>{{dt.spot_price}}</td>
+      <td>{{dt.sp_date_time}}</td>
+      <td>{{dt.best_buy}}</td>
+      <td>{{dt.best_sell}}</td>
+      <td>{{dt.oi}}</td>
+    </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  
+  
+  </body></html>
